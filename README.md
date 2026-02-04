@@ -28,15 +28,19 @@ pipx install git+https://github.com/ORG_NAME/target-channeldock.git@main
 
 ### Accepted Config Options
 
-<!--
-Developer TODO: Provide a list of config options accepted by the target.
+- `api_key` (required): ChannelDock API Key
+- `api_secret` (required): ChannelDock API Secret
+- `url_base` (optional): The base URL for the ChannelDock API (default: `https://channeldock.com/portal/api/v2`). Set this to a different URL if needed (e.g. staging).
 
-This section can be created by copy-pasting the CLI output from:
+### Example Configuration
 
+```json
+{
+  "api_key": "your-api-key",
+  "api_secret": "your-api-secret",
+  "url_base": "https://channeldock.com/portal/api/v2"
+}
 ```
-target-channeldock --about --format=markdown
-```
--->
 
 A full list of supported settings and capabilities for this
 target is available by running:
@@ -50,12 +54,6 @@ target-channeldock --about
 This Singer target will automatically import any environment variables within the working directory's
 `.env` if the `--config=ENV` is provided, such that config values will be considered if a matching
 environment variable is set either in the terminal context or in the `.env` file.
-
-### Source Authentication and Authorization
-
-<!--
-Developer TODO: If your target requires special access on the destination system, or any special authentication requirements, provide those here.
--->
 
 ## Usage
 
